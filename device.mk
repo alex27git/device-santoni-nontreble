@@ -36,6 +36,10 @@ PRODUCT_PACKAGES += \
     libunwind \
     libbacktrace-vendor
 
+# RemovePackages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Init scripts
 PRODUCT_PACKAGES += \
     init.device.rc \
