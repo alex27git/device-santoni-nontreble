@@ -30,6 +30,10 @@ TARGET_TS_MAKEUP := true
 # Kernel
 TARGET_KERNEL_CONFIG := santoni_defconfig
 TARGET_KERNEL_VERSION := 4.9
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_CLANG_VERSION := 12.0
+KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-12.0/bin
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
 
 # Init
 TARGET_INIT_VENDOR_LIB         := libinit_santoni
@@ -37,7 +41,7 @@ TARGET_PLATFORM_DEVICE_BASE    := /devices/soc/
 TARGET_RECOVERY_DEVICE_MODULES := libinit_santoni
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2018-10-01
+VENDOR_SECURITY_PATCH := 2020-09-05
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
